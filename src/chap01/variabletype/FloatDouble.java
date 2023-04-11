@@ -1,4 +1,4 @@
-package chap01.variableType;
+package chap01.variabletype;
 
 public class FloatDouble {
 	

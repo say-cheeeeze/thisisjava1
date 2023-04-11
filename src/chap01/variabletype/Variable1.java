@@ -1,4 +1,4 @@
-package chap01.variableType;
+package chap01.variabletype;
 
 public class Variable1 {
 	
@@ -14,7 +14,7 @@ public class Variable1 {
 		 * 값의 허용범위를 외울 필요는 없지만
 		 * 메모리 할당 크기는 알아야함.
 		 * byte : 8bit. -127 ~ 128
-		 * short : 2 byte. 16bit. -32.768 ~ 32.767
+		 * short : 2 byte. 16bit. -32768 ~ 32767
 		 * char : 2 byte. 16bit. 0 ~ 65536 유니코드
 		 * int 는 4 byte. 32bit.
 		 * long 은 8 byte. 64bit.
@@ -80,5 +80,17 @@ public class Variable1 {
 		// int long1 = 10000000000; //Integer number too Large
 		long long2 = 100000000000L;
 		System.out.println( long2 );
+		
+		String str1 = "hi";
+		String str2 = new String( "hi" );
+		
+		
+		System.out.println( str1.equals( str2 ) );
+		
+		System.out.println( str1 == str2 );
+		
 	}
+	
+	
+	
 }
