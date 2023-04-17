@@ -13,9 +13,9 @@ public class Char01 {
 		 */
 		char var1 = 'A';
 		System.out.println( var1 );
-		
-		char var3 = '가';
-		System.out.println( var3 );
+
+//		char var3 = '가';
+//		System.out.println( var3 );
 		
 		
 		/**
