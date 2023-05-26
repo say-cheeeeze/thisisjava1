@@ -9,3 +9,5 @@
 public class 자식클래스 extends 부모클래스1 {
 
 }
+
+@Overriding : 컴파일 시 정확히 오버라이딩이 되었는지 체크해줌(생략 가능)

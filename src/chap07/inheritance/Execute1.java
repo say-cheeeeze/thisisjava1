@@ -14,5 +14,13 @@ public class Execute1 {
 		
 		System.out.println( "wifi : " +  smartPhone.wifi );
 		
+		smartPhone.bell();
+		
+		smartPhone.sendVoice( "오늘은 날씨가 덥군용.." );
+		
+		smartPhone.receiveMessage( "어디야 윤재얌" );
+		smartPhone.setWifi( true );
+		smartPhone.hangUp();
+		smartPhone.finalMethod();
 	}
 }
