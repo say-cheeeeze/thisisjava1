@@ -1,0 +1,19 @@
+인터페이스
+interface 는 default / public 접근제한자가 있다.
+
+public interface 인터페이스명 {
+
+	public 상수 필드
+	public 추상메서드 - 실행부가 없는 메서드
+	public 디폴트메서드
+	public 정적 메서드
+
+	private 메서드
+	private 정적메서드
+
+	가 올 수 있다.
+}
+
+인터페이스에 선언된 필드는 모두 public static final 특성을 갖는다.
+생략하더라도 자동적으로 컴파일 과정에서
+필드에 public static final 이 붙는다.
