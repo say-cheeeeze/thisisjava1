@@ -14,18 +14,48 @@ package chap09.nestedclass;
 public class ClassA {
 	
 	void method1() {
-		class B {
+		
+		/**
+		 * 로컬 클래스
+		 * method 가 실행할 때만 생성된다.
+		 */
+		class LocalClass {
+			LocalClass() {
+				this.name = "yoonjae";
+				this.age = 10;
+			}
 			String name;
 			int age;
 		}
+		LocalClass localClass = new LocalClass();
+		System.out.println( localClass.age );
+		System.out.println( localClass.name );
 	}
 	
-	class B {
-		// 멤버클래스.
-		// ClassA 객체를 생성해야하지만 B 객체를 생성할 수 있다.
+	void method2() {
+		// LocalClass // X 위 로컬 클래스 생성 및 접근 불가
 	}
 	
-	static class C {
-		// ClassA 객체를 생성하지 않아도 C 객체를 생성할 수 있다.
+	/**
+	 * 인스턴스 멤버 클래스
+	 * ClassA 객체를 생성 후에 객체를 생성할 수 있다.
+	 */
+	class MemberClass {
+		public String className = "memberClass";
+		
+		// 정적 필드. Java 17 부터 허용.
+		static int staticField = 2;
+		
+		static void method() {
+			// 정적 메소드. Java 17 부터 허용.
+		}
+	}
+	
+	/**
+	 * 정적 멤버 클래스
+	 * ClassA 객체를 생성하지 않아도 객체를 생성할 수 있다.
+	 */
+	static class StaticClass {
+		public String className = "staticClass";
 	}
 }
