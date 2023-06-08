@@ -1,0 +1,18 @@
+어노테이션	설명
+@NoArgsConstructor	기본(매개변수가 없는) 생성자 포함
+@AllArgsConstructor	모든 필드를 초기화시키는 생성자 포함
+@RequiredArgsConstructor	기본적으로 매개변수가 없는 생성자 포함.
+만약 final 또는 @NonNull 이 붙은 필드가 있다면 이 필드만 초기화시키는 생성자 포함함.
+@Getter	Getter 메소드 포함
+@Setter	Setter 메소드 포함
+@EqualsAndHashCode	equals() 와 hashCode() 메소드 포함
+@ToString	toString() 메소드 포함
+
+@Data	@RequiredArgsConstructor, @Getter, @Setter, @EqualsAndHashCode, @ToString 어노테이션들 합
+
+필드 어노테이션 중
+@NonNull
+final과 다른점.
+final 은 초기화된 필드를 변경할 수 없어 Setter 가 만들어지지 않지만
+@NonNull 은 Setter 메소드가 생성되며, null 이 아닌 다른값으로 Setter 를 통해 변경할 수 있다.
+
