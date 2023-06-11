@@ -8,6 +8,16 @@ public class Ex1 {
 		
 		thread.start();
 		
+		try {
+			
+			Thread.sleep( 2000 );
+		}
+		catch ( InterruptedException e ) {
+			e.printStackTrace();
+		}
+		
+		System.out.println( "isInterrupted : " + thread.isInterrupted() );
 		thread.interrupt();
+		System.out.println( "isInterrupted : " + thread.isInterrupted() );
 	}
 }
