@@ -1,4 +1,4 @@
-package chap15_collection.collection.set;
+package chap15_collection.set;
 
 import java.util.HashSet;
 import java.util.Iterator;
