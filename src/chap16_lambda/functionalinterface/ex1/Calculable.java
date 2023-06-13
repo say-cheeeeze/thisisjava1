@@ -1,4 +1,4 @@
-package chap16_lambda.functionalinterface;
+package chap16_lambda.functionalinterface.ex1;
 
 @FunctionalInterface
 public interface Calculable {

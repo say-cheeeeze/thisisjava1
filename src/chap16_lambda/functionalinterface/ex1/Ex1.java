@@ -1,4 +1,4 @@
-package chap16_lambda.functionalinterface;
+package chap16_lambda.functionalinterface.ex1;
 
 /**
  * 함수형 인터페이스는 단 하나의 추상 메소드만을 갖는다.
