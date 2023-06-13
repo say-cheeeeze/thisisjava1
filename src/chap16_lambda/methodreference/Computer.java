@@ -11,4 +11,7 @@ public class Computer {
 		System.out.println( "double instanceGetSum" );
 		return x + y;
 	}
+	public void justPrint( double x, double y ) {
+		System.out.println( " x : " + x + " , y : " + y );
+	}
 }
