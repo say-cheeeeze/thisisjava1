@@ -16,10 +16,10 @@ class Person implements Comparable<Person> {
 	public int compareTo(Person o) {
 		
 		if ( o.age > this.age ) {
-			return 1;
+			return -1;
 		}
 		else if ( o.age < this.age ) {
-			return -1;
+			return 1;
 		}
 		else {
 			return 0;
@@ -47,6 +47,9 @@ public class Comparable1 {
 			
 			System.out.println( person );
 		}
+		
+		Person lastPerson = personTree.last();
+		System.out.println( "lastPerson : " + lastPerson );
 	}
 	
 }
