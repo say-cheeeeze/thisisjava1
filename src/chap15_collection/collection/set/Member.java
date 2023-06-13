@@ -1,4 +1,4 @@
-package chap15_collection.set;
+package chap15_collection.collection.set;
 
 public class Member {
 	

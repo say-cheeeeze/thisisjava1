@@ -1,4 +1,4 @@
-package chap15_collection.collection.map;
+package chap15_collection.map;
 
 import java.util.HashMap;
 import java.util.Hashtable;
