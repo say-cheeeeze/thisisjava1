@@ -1,4 +1,4 @@
-package chap17_stream.ex3_filter;
+package chap17_stream.filter;
 
 import java.util.ArrayList;
 import java.util.List;
