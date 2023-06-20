@@ -1,4 +1,4 @@
-package chap19_network;
+package chap19_network.ex1_basic;
 
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
@@ -30,10 +30,12 @@ public class ServerExample {
 			String input = scanner.nextLine();
 			
 			if ( input.toLowerCase().equals( "q" ) ) {
+				System.out.println( "break.." );
 				break;
 			}
 		}
 		
+		System.out.println( "scanner.close()..." );
 		scanner.close();
 		
 		stopServer();
@@ -65,7 +67,7 @@ public class ServerExample {
 					}
 				}
 				catch( Exception e ) {
-					e.printStackTrace();
+					System.out.println( "[서버] " + e.getMessage() );
 				}
 			}
 		};
@@ -79,7 +81,7 @@ public class ServerExample {
 			System.out.println( "[서버] 종료됨.." );
 		}
 		catch( Exception e ) {
-			
+//			e.printStackTrace();
 		}
 	}
 }

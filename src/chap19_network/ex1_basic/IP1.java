@@ -1,12 +1,18 @@
-package chap19_network;
+package chap19_network.ex1_basic;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.nio.charset.Charset;
 
 public class IP1 {
 	
 	public static void main( String[] args ) throws UnknownHostException {
 		
+		getIPTest();
+	}
+
+	public static void getIPTest() throws UnknownHostException {
+
 		InetAddress ia = InetAddress.getLocalHost();
 		String host = ia.getHostAddress();
 		System.out.println( host );
@@ -20,5 +26,4 @@ public class IP1 {
 		}
 		
 	}
-
 }
