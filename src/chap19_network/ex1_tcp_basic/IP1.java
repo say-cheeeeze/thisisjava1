@@ -1,4 +1,4 @@
-package chap19_network.ex1_basic;
+package chap19_network.ex1_tcp_basic;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

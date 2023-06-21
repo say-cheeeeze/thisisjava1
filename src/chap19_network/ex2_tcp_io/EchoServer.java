@@ -1,10 +1,12 @@
-package chap19_network.ex2_io;
+package chap19_network.ex2_tcp_io;
 
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 /**
  * localhost 에서 port 를 할당하여 소켓 서버를 열고,
@@ -26,6 +28,18 @@ public class EchoServer {
 
 		// TCP 서버 구동
 		startServer();
+		
+		Scanner scanner = new Scanner( System.in );
+		while( true ) {
+			
+			String input = scanner.nextLine();
+			if ( input.toLowerCase().equals( "q" ) ) {
+				break;
+			}
+		}
+		scanner.close();
+		
+		stopServer();
 		
 	}
 	
@@ -52,13 +66,24 @@ public class EchoServer {
 						InetSocketAddress isa = ( InetSocketAddress ) client.getRemoteSocketAddress();
 						System.out.println( "[서버] " + isa.getHostName() + " 의 연결 요청을 수락함" );
 						
-						
 						// 데이터 받기
 						DataInputStream dis = new DataInputStream( client.getInputStream() );
 						String message = dis.readUTF(); // return Unicode String
 						
 						System.out.println( "받은 데이터 : " + message );
 						
+						// 데이터 보내기
+						DataOutputStream dos = new DataOutputStream( client.getOutputStream() );
+
+						// 받은 메세지를 그대로 다시 보냄
+						dos.writeUTF( message );
+						
+						System.out.println( "[서버] 받은 데이터를 다시 보냄 : " + message );
+						
+						
+						// 연결 해제
+						client.close();
+						System.out.println( "[서버] " + isa.getHostName() + " 의 연결을 해제함.." );
 						
 					}
 					
@@ -69,18 +94,20 @@ public class EchoServer {
 				}
 			}
 		};
+		
+		serverThread.start();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public static void stopServer() {
+		
+		try {
+			serverSocket.close();
+			System.out.println( "[서버] 종료됨.." );
+		}
+		catch( IOException e ) {
+			System.out.println( e.getMessage() );
+		}
+	}
 	
 	
 }
