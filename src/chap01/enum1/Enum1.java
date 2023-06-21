@@ -17,7 +17,7 @@ package chap01.enum1;
  * 만약 여러 단어로 이루어질 경우 underscore (_) 를 통해 연결하는 것이 관례이다.
  *
  */
-public enum Enum01 {
+public enum Enum1 {
 	
 	MONDAY,
 	TUESDAY,
