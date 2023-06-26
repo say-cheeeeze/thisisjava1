@@ -52,7 +52,8 @@ public class JSONdata {
 		System.out.println( strJson );
 		
 		// 파일로 저장
-		String here = "K:/eclipseworkspace/thisisjava1/src/chap19_network/ex6_json/json1.txt";
+		
+		String here = System.getProperty( "user.dir" ) + "/src/chap19_network/ex6_json/json1.txt";
 		Writer writer = new FileWriter( here, Charset.defaultCharset() );
 		writer.write( strJson );
 		writer.flush();
@@ -62,7 +63,7 @@ public class JSONdata {
 	
 	public static void readJsonFile() throws IOException {
 
-		String jsonFile = "K:/eclipseworkspace/thisisjava1/src/chap19_network/ex6_json/json1.txt";
+		String jsonFile = System.getProperty( "user.dir" ) + "/src/chap19_network/ex6_json/json1.txt";
 		BufferedReader reader = new BufferedReader( new FileReader( jsonFile, Charset.defaultCharset() ) );
 		String line = reader.readLine();
 		
